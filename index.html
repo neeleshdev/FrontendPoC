@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+
+<body class="p-body">
+    <h2>Self Help Tool</h2>
+    <form >
+
+        <!-- Q1 -->
+        <div class="form-group">
+            <label class="que" for="exampleInputEmail1">Q1. Are you a Singapore Citizen / Permanent Resident? </label><br>
+            <small id="emailHelp" class="form-text text-muted"><i>Select one</i></small>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q1" id="questn1A">
+                <label class="form-check-label" for="questn1A">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q1" id="questn1B">
+                <label class="form-check-label" for="questn1B">
+                    No
+                </label>
+            </div>
+        </div>
+
+        <!-- Q-2 -->
+        <div class="form-group" id="questn2">
+            <label class="que" for="exampleInputEmail1">Q2. Are you on a Work Permit?</label><br>
+            <small id="emailHelp" class="form-text text-muted"><i>Select one</i></small>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q2" id="questn2A">
+                <label class="form-check-label" for="questn2A">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q2" id="questn2B">
+                <label class="form-check-label" for="questn2B">
+                    No
+                </label>
+            </div>
+        </div>
+
+        <!-- Q-3 -->
+        <div class="form-group" id="questn3">
+            <label class="que" for="exampleInputPassword1">Q3. I want to:</label><br>
+            <small id="emailHelp" class="form-text text-muted"><i>Select all that apply</i></small>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Talk to a lawyer about my problem (one-off legal guidance)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="questn4B">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Get a lawyer to work on my case (e.g., write letters, negotiate, go to court)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Get more information about resources to help solve my problem (e.g., videos, FAQs, publications)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="questn3Other">
+                <label class="form-check-label" for="questn3Other">
+                    Other
+                </label>
+                <input type="text" class="form-control" id="questn3Txt" placeholder="Please type another option here">
+            </div>
+        </div>
+
+        <!-- Q-4 -->
+        <div class="form-group" id="questn4">
+            <label class="que" for="exampleInputPassword1">Q4. Problem(s) I need help with:</label><br>
+            <small id="emailHelp" class="form-text text-muted"><i>Select all that apply</i></small>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Cannot pay debts (bankruptcy)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Criminal (e.g., police investigating me, facing criminal charge)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Employment (e.g., problems with employment contract, losing my job)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="other">
+                <label class="form-check-label" for="other">
+                    Estate matters (e.g., wills, deputyship, lasting power of attorney)
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="questn4E">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Family (e.g., divorce, problems with spouse)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Injury (e.g., workplace accident, traffic accident)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="other">
+                <label class="form-check-label" for="other">
+                    Harrasment (e.g. shouting, stalking, threats, throwing things)
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Neighbour problems
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Online Harms (e.g., online falsehoods, release of non-consensual intimate images, revealing of personal information online)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="other">
+                <label class="form-check-label" for="other">
+                    Something wrong with what I bought
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="questn4Other">
+                <label class="form-check-label" for="questn4Other">
+                    Other
+                </label>
+                <input type="text" class="form-control" id="questn4Txt" placeholder="Please type another option here">
+            </div>
+
+            <p id="questn4ETxt1">Pro Bono SG's <strong>Family Justice Support Scheme&nbsp;(FJSS)</strong>&nbsp;helps to find a lawyer for people who don't have a lot of money, as well as foreign spouses with Singaporean children facing family law issues.</p>
+            <p id="questn4ETxt2">The next few questions will help you check whether you qualify for the Family Justice Support Scheme. </p>
+        </div>
+
+        <!-- Q-5 -->
+        <div class="form-group" id="questn5">
+            <label class="que" for="exampleInputPassword1">Q5. Problem(s) I need help with:</label><br>
+            <small id="emailHelp" class="form-text text-muted"><i>Select all that apply</i></small>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    A. Boss didn't pay salary
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    B. Injured at work
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    C. Criminal case (police case / arrested / charged in court)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="questn5Other">
+                <label class="form-check-label" for="questn5Other">
+                    Other
+                </label>
+                <input type="text" class="form-control" id="questn5Txt" placeholder="Please type another option here">
+            </div>
+        </div>
+
+        <!-- Q-6 -->
+        <div class="form-group" id="questn6">   
+            <label class="que" for="exampleInputPassword1">Q6. Are you facing any of these:</label><br>
+            <small id="emailHelp" class="form-text text-muted"><i>Select all that apply</i></small>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Ongoing / threat of physical violence / harm
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Immediate loss of shelter, food, or other basic necessities
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Threat of deportation (e.g., cancellation of work permit / dependent's pass)
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="other">
+                <label class="form-check-label" for="other">
+                    Received legal documents with deadlines (e.g., letter of demand, summons)
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Upcoming court date
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <label class="form-check-label" for="flexCheckChecked">
+                    No urgent situation
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="questn6Other">
+                <label class="form-check-label" for="questn6Other">
+                    Other
+                </label>
+                <input type="text" class="form-control" id="questn6Txt" placeholder="Please type another option here">
+            </div>
+        </div>
+
+        <button type="submit"  id="submit" class="btn btn-primary submit-btn">Submit</button>
+    </form>
+</body>
+
+</html>
