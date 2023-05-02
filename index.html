@@ -18,20 +18,21 @@
 
 <body class="p-body">
     <h2>Self Help Tool</h2>
-    <form >
+    <form id="my_form">
 
         <!-- Q1 -->
         <div class="form-group">
-            <label class="que" for="exampleInputEmail1">Q1. Are you a Singapore Citizen / Permanent Resident? </label><br>
+            <label class="que" for="exampleInputEmail1">Q1. Are you a Singapore Citizen / Permanent Resident?
+            </label><br>
             <small id="emailHelp" class="form-text text-muted"><i>Select one</i></small>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q1" id="questn1A">
+                <input class="form-check-input" type="radio" name="Q1" value="Yes" id="questn1A">
                 <label class="form-check-label" for="questn1A">
                     Yes
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q1" id="questn1B">
+                <input class="form-check-input" type="radio" name="Q1" value="No" id="questn1B">
                 <label class="form-check-label" for="questn1B">
                     No
                 </label>
@@ -43,13 +44,13 @@
             <label class="que" for="exampleInputEmail1">Q2. Are you on a Work Permit?</label><br>
             <small id="emailHelp" class="form-text text-muted"><i>Select one</i></small>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q2" id="questn2A">
+                <input class="form-check-input" type="radio" value="Yes" name="Q2" id="questn2A">
                 <label class="form-check-label" for="questn2A">
                     Yes
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="Q2" id="questn2B">
+                <input class="form-check-input" type="radio" value="No" name="Q2" id="questn2B">
                 <label class="form-check-label" for="questn2B">
                     No
                 </label>
@@ -61,25 +62,29 @@
             <label class="que" for="exampleInputPassword1">Q3. I want to:</label><br>
             <small id="emailHelp" class="form-text text-muted"><i>Select all that apply</i></small>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" name="Q3"
+                    value="Talk to a lawyer about my problem (one-off legal guidance)" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
                     Talk to a lawyer about my problem (one-off legal guidance)
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="questn4B">
+                <input class="form-check-input" type="checkbox" name="Q3"
+                    value="Get a lawyer to work on my case (e.g., write letters, negotiate, go to court)" id="questn3B">
                 <label class="form-check-label" for="flexCheckChecked">
                     Get a lawyer to work on my case (e.g., write letters, negotiate, go to court)
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <input class="form-check-input" type="checkbox" name="Q3"
+                    value="Get more information about resources to help solve my problem (e.g., videos, FAQs, publications)"
+                    id="flexCheckChecked">
                 <label class="form-check-label" for="flexCheckChecked">
                     Get more information about resources to help solve my problem (e.g., videos, FAQs, publications)
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="questn3Other">
+                <input class="form-check-input" type="checkbox" name="Q3" value="Other" id="questn3Other">
                 <label class="form-check-label" for="questn3Other">
                     Other
                 </label>
@@ -92,77 +97,159 @@
             <label class="que" for="exampleInputPassword1">Q4. Problem(s) I need help with:</label><br>
             <small id="emailHelp" class="form-text text-muted"><i>Select all that apply</i></small>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" name="Q4" type="checkbox" value="Cannot pay debts (bankruptcy)"
+                    id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
                     Cannot pay debts (bankruptcy)
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <input class="form-check-input" name="Q4" type="checkbox"
+                    value="Criminal (e.g., police investigating me, facing criminal charge)" id="questn4B">
                 <label class="form-check-label" for="flexCheckChecked">
                     Criminal (e.g., police investigating me, facing criminal charge)
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <input class="form-check-input" name="Q4" type="checkbox"
+                    value="Employment (e.g., problems with employment contract, losing my job)" id="flexCheckChecked">
                 <label class="form-check-label" for="flexCheckChecked">
                     Employment (e.g., problems with employment contract, losing my job)
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="other">
+                <input class="form-check-input" name="Q4" type="checkbox"
+                    value="Estate matters (e.g., wills, deputyship, lasting power of attorney)" id="other">
                 <label class="form-check-label" for="other">
                     Estate matters (e.g., wills, deputyship, lasting power of attorney)
                 </label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="questn4E">
+                <input class="form-check-input" name="Q4" type="checkbox"
+                    value="Family (e.g., divorce, problems with spouse)" id="questn4E">
                 <label class="form-check-label" for="flexCheckChecked">
                     Family (e.g., divorce, problems with spouse)
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <input class="form-check-input" name="Q4" type="checkbox"
+                    value="Injury (e.g., workplace accident, traffic accident)" id="flexCheckChecked">
                 <label class="form-check-label" for="flexCheckChecked">
                     Injury (e.g., workplace accident, traffic accident)
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="other">
+                <input class="form-check-input" name="Q4" type="checkbox"
+                    value="Harrasment (e.g. shouting, stalking, threats, throwing things)" id="other">
                 <label class="form-check-label" for="other">
                     Harrasment (e.g. shouting, stalking, threats, throwing things)
                 </label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <input class="form-check-input" name="Q4" type="checkbox" value="Neighbour problems"
+                    id="flexCheckChecked">
                 <label class="form-check-label" for="flexCheckChecked">
                     Neighbour problems
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <input class="form-check-input" name="Q4" type="checkbox"
+                    value="Online Harms (e.g., online falsehoods, release of non-consensual intimate images, revealing of personal information online)"
+                    id="flexCheckChecked">
                 <label class="form-check-label" for="flexCheckChecked">
-                    Online Harms (e.g., online falsehoods, release of non-consensual intimate images, revealing of personal information online)
+                    Online Harms (e.g., online falsehoods, release of non-consensual intimate images, revealing of
+                    personal information online)
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="other">
+                <input class="form-check-input" name="Q4" type="checkbox" value="Something wrong with what I bought"
+                    id="other">
                 <label class="form-check-label" for="other">
                     Something wrong with what I bought
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="questn4Other">
+                <input class="form-check-input" name="Q4" value="Other" type="checkbox" id="questn4Other">
                 <label class="form-check-label" for="questn4Other">
                     Other
                 </label>
-                <input type="text" class="form-control" id="questn4Txt" placeholder="Please type another option here">
+                <input type="text" class="form-control" name="Q4" id="questn4Txt"
+                    placeholder="Please type another option here">
             </div>
 
-            <p id="questn4ETxt1">Pro Bono SG's <strong>Family Justice Support Scheme&nbsp;(FJSS)</strong>&nbsp;helps to find a lawyer for people who don't have a lot of money, as well as foreign spouses with Singaporean children facing family law issues.</p>
-            <p id="questn4ETxt2">The next few questions will help you check whether you qualify for the Family Justice Support Scheme. </p>
+            <p id="questn4ETxt1">Pro Bono SG's <strong>Family Justice Support Scheme&nbsp;(FJSS)</strong>&nbsp;helps to
+                find a lawyer for people who don't have a lot of money, as well as foreign spouses with Singaporean
+                children facing family law issues.</p>
+            <p id="questn4ETxt2">The next few questions will help you check whether you qualify for the Family Justice
+                Support Scheme. </p>
+        </div>
+
+        <!-- Q-12 -->
+        <div class="form-group" id="questn12">
+            <label class="que" for="exampleInputEmail1">Q12. Have you approached the Legal Aid Bureau (LAB)?
+            </label><br>
+            <small id="emailHelp" class="form-text text-muted"><i>Select one</i></small>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q12" value="Yes" id="questn12A">
+                <label class="form-check-label" for="questn12A">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q12" value="No" id="questn12B">
+                <label class="form-check-label" for="questn12B">
+                    No
+                </label>
+            </div>
+        </div>
+
+        <div id="12ATxt">
+            <p><strong>Please apply to the <a href="https://lab.mlaw.gov.sg/" target="_blank" rel="nofollow">Legal Aid
+                        Bureau&nbsp;(LAB)</a>&nbsp;before applying to Pro Bono SG.</strong></p>
+            <p>If you are a Singapore Citizen/Permanent Resident, you may be eligible for assistance from the <a
+                    href="https://lab.mlaw.gov.sg/" target="_blank" rel="nofollow">Legal Aid Bureau</a>.</p>
+            <ul style="list-style-type: disc;">
+                <li>Click <span style="text-decoration: underline;"><a
+                            href="https://lab.mlaw.gov.sg/legal-services/type-of-services/" target="_blank"
+                            rel="nofollow">here </a></span>for more information on&nbsp;the types of services that LAB
+                    provides</li>
+                <li>Apply online for the&nbsp;Legal Aid Bureau&nbsp;<span style="text-decoration: underline;"><a
+                            href="https://eservices.mlaw.gov.sg/labesvc/" target="_blank"
+                            rel="nofollow">here</a></span>. A guide to applying for LAB can be found <a
+                        href="https://lab.mlaw.gov.sg/files/Guide-to-apply-online-via-the-Applicant-Portal-v2.pdf"
+                        target="_blank" rel="nofollow">here</a>.&nbsp;</li>
+                <li>Apply in-person at:
+                    <blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><strong>Ministry of Law Services
+                            Centre</strong></blockquote>
+                    <blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;">45 Maxwell Road #07-11 The URA
+                        Centre (East Wing), Singapore 069118</blockquote>
+                    <blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;">Mondays to Fridays: 8:30am to
+                        5:00pm (closed on weekends and public holidays)</blockquote>
+                </li>
+            </ul>
+            <p>You can only apply for Pro Bono SG's&nbsp;Family Justice Support Scheme if you have been <span
+                    style="text-decoration: underline;">rejected</span> by the&nbsp;Legal Aid Bureau.&nbsp;</p>
+        </div>
+
+        <!-- Q-13 -->
+        <div class="form-group" id="questn13">
+            <label class="que" for="exampleInputEmail1">Q13. What is the status of your Legal Aid Bureau (LAB)
+                application? </label><br>
+            <small id="emailHelp" class="form-text text-muted"><i>Select one</i></small>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q13" value="Pending" id="questn13A">
+                <label class="form-check-label" for="questn13A">
+                    Pending
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q13" value="Rejected" id="questn13B">
+                <label class="form-check-label" for="questn13B">
+                    Rejected
+                </label>
+            </div>
         </div>
 
         <!-- Q-5 -->
@@ -170,25 +257,28 @@
             <label class="que" for="exampleInputPassword1">Q5. Problem(s) I need help with:</label><br>
             <small id="emailHelp" class="form-text text-muted"><i>Select all that apply</i></small>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" name="Q5" value="A. Boss didn't pay salary"
+                    id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
                     A. Boss didn't pay salary
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <input class="form-check-input" type="checkbox" name="Q5" value="B. Injured at work"
+                    id="flexCheckChecked">
                 <label class="form-check-label" for="flexCheckChecked">
                     B. Injured at work
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <input class="form-check-input" type="checkbox" name="Q5"
+                    value="C. Criminal case (police case / arrested / charged in court)" id="flexCheckChecked">
                 <label class="form-check-label" for="flexCheckChecked">
                     C. Criminal case (police case / arrested / charged in court)
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="questn5Other">
+                <input class="form-check-input" type="checkbox" name="Q5" value="Other" id="questn5Other">
                 <label class="form-check-label" for="questn5Other">
                     Other
                 </label>
@@ -196,49 +286,298 @@
             </div>
         </div>
 
+        <!-- Q-7 -->
+        <div class="form-group" id="questn7">
+            <label class="que" for="exampleInputEmail1">Q7. Have you applied for assistance at the Public Defender's
+                Office (PDO)? </label><br>
+            <small id="emailHelp" class="form-text text-muted"><i>Select one</i></small>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q7" value="Yes" id="questn7A">
+                <label class="form-check-label" for="questn7A">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q7" value="No" id="questn7B">
+                <label class="form-check-label" for="questn7B">
+                    No
+                </label>
+            </div>
+        </div>
+
+        <!-- Q-7ATxt -->
+        <div id="7ATxt" class="txt-bg">
+            <p><strong>Please apply to the <a href="https://pdo.mlaw.gov.sg/criminal-defence-aid/how-to-apply/"
+                        target="_blank" rel="nofollow">Public Defender's Office</a>&nbsp;(PDO) before applying to Pro
+                    Bono SG.</strong></p>
+            <p>If you are a Singaporean Citizen/Permanent Resident, you may be eligible for assistance from
+                the&nbsp;Public Defender's Office.</p>
+            <ul style="list-style-type: disc;">
+                <li>Click <span style="text-decoration: underline;"><a
+                            href="https://pdo.mlaw.gov.sg/criminal-defence-aid/scope-of-assistance/" target="_blank"
+                            rel="nofollow">here </a></span>for more information on the Public Defender's Office</li>
+                <li>Apply online for the Public Defender's Office <span style="text-decoration: underline;"><a
+                            href="https://form.gov.sg/62cd713dcc1b75001223262a" target="_blank"
+                            rel="nofollow">here</a></span>.</li>
+                <li>Apply in-person at:
+                    <blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><strong>Ministry of Law Services
+                            Centre</strong></blockquote>
+                    <blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;">45 Maxwell Road #07-11 The URA
+                        Centre (East Wing), Singapore 069118</blockquote>
+                    <blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;">Mondays to Fridays: 8:30am to
+                        5:00pm (closed on weekends and public holidays)</blockquote>
+                    <blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;"><strong>State Courts (Help
+                            Centre)</strong></blockquote>
+                    <blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;">1 Havelock Square #B1-18 State
+                        Courts, Singapore 059724</blockquote>
+                    <blockquote style="margin: 0 0 0 40px; border: none; padding: 0px;">Mondays to Fridays: 9:00am to
+                        12:00pm, 2:00pm to 5:00pm</blockquote>
+                </li>
+            </ul>
+            <p>You can only apply for Pro Bono SG's Criminal Legal Aid Scheme if you have been <span
+                    style="text-decoration: underline;">rejected</span> by the Public Defender's Office.</p>
+        </div>
+
+
+        <!-- Q-8 -->
+        <div class="form-group" id="questn8">
+            <label class="que" for="exampleInputEmail1">Q8. Please state the outcome of your application: </label><br>
+            <small id="emailHelp" class="form-text text-muted"><i>Select one</i></small>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q8" value="Pending" id="questn8A">
+                <label class="form-check-label" for="questn8A">
+                    Pending
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q8" value="Rejected" id="questn8B">
+                <label class="form-check-label" for="questn8B">
+                    Rejected
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q8" value="Approved" id="questn8C">
+                <label class="form-check-label" for="questn8C">
+                    Approved
+                </label>
+            </div>
+        </div>
+
+        <!-- Q8ATxt -->
+        <div id="Q8ATxt">
+            <p><strong>Please wait for the outcome of your Public Defender's Office (PDO) application. You can only
+                    apply for the Criminal Legal Aid Scheme if you have been&nbsp;<span
+                        style="text-decoration: underline;">rejected</span>&nbsp;by the PDO.&nbsp;</strong></p>
+            <ul style="list-style-type: disc;">
+                <li>Click <a href="https://pdo.mlaw.gov.sg/criminal-defence-aid/scope-of-assistance/" target="_blank"
+                        rel="nofollow">here</a> for more information on the&nbsp;PDO</li>
+                <li>Click <a href="https://pdo.mlaw.gov.sg/criminal-defence-aid/after-you-apply/" target="_blank"
+                        rel="nofollow">here</a> for information about&nbsp;what happens after you apply for PDO</li>
+                <li>Apply online for the&nbsp;PDO <a href="https://form.gov.sg/62cd713dcc1b75001223262a" target="_blank"
+                        rel="nofollow">here</a>.</li>
+                <li>Apply in-person at:</li>
+            </ul>
+            <p style="padding-left: 60px;"><strong>Ministry of Law Services Centre</strong><br>45 Maxwell Road #07-11
+                The URA Centre (East Wing), Singapore 069118<br>Mondays to Fridays: 8:30am to 5:00pm (closed on weekends
+                and public holidays)</p>
+            <p style="padding-left: 60px;"><br><strong>State Courts (Help Centre)</strong><br>1 Havelock Square #B1-18
+                State Courts, Singapore 059724<br>Mondays to Fridays: 9:00am to 12:00pm, 2:00pm to 5:00pm</p>
+        </div>
+
+        <!-- Q8CTxt -->
+        <div id="Q8CTxt" class="form-html" data-component="text" tabindex="0">
+            <p><strong>You can only apply for the Criminal Legal Aid Scheme if you have been&nbsp;<span
+                        style="text-decoration: underline;">rejected</span>&nbsp;by the PDO.&nbsp;</strong></p>
+            <ul style="list-style-type: disc;">
+                <li>Click <a href="https://pdo.mlaw.gov.sg/criminal-defence-aid/scope-of-assistance/" target="_blank"
+                        rel="nofollow">here</a> for more information on the&nbsp;PDO</li>
+                <li>Click <a href="https://pdo.mlaw.gov.sg/criminal-defence-aid/after-you-apply/" target="_blank"
+                        rel="nofollow">here</a> for information about&nbsp;what happens after you apply for PDO</li>
+                <li>Apply online for the&nbsp;PDO <a href="https://form.gov.sg/62cd713dcc1b75001223262a" target="_blank"
+                        rel="nofollow">here</a>.</li>
+                <li>Apply in-person at:</li>
+            </ul>
+            <p style="padding-left: 60px;"><strong>Ministry of Law Services Centre</strong><br>45 Maxwell Road #07-11
+                The URA Centre (East Wing), Singapore 069118<br>Mondays to Fridays: 8:30am to 5:00pm (closed on weekends
+                and public holidays)</p>
+            <p style="padding-left: 60px;"><br><strong>State Courts (Help Centre)</strong><br>1 Havelock Square #B1-18
+                State Courts, Singapore 059724<br>Mondays to Fridays: 9:00am to 12:00pm, 2:00pm to 5:00pm</p>
+        </div>
+
+        <!-- Q-9 -->
+        <div class="form-group" id="questn9">
+            <label class="que" for="exampleInputEmail1">Q9. Have you been formally charged in court?</label><br>
+            <small id="emailHelp" class="form-text text-muted"><i>Select one</i></small>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q9" value="Yes" id="questn9A">
+                <label class="form-check-label" for="questn9A">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q9" value="No" id="questn9B">
+                <label class="form-check-label" for="questn9B">
+                    No
+                </label>
+            </div>
+        </div>
+
+        <div id="Q9BTxt">
+            <p>We are not able to represent you under CLAS until you have been charged in court. Please submit your
+                application <strong>after</strong> you have been charged in court.</p>
+        </div>
+
+        <!-- Q9-Txt-->
+        <div id="Q9BTxt-2" data-layout="full">
+            <div id="text_37">
+                <p><strong>What is being charged in court?</strong></p>
+                <p>Being charged in court is when you appear in court for the first time and what crime is thought that
+                    you have committed is read out to you in front of a judge. You should also be given a copy of a
+                    Charge Sheet, which generally looks like this:</p>
+                <p>&nbsp;</p>
+                <p>In order to apply for CLAS, you need a copy of this Charge Sheet.</p>
+            </div>
+        </div>
+
+        <!--Q-10-->
+        <div class="form-group" id="questn10">
+            <label class="que" for="Q10">Q10. Are one or more of your charges covered under the Criminal Legal Aid
+                Scheme (CLAS)?</label><br>
+            <small id="emailHelp" class="form-text text-muted"><i>Select one</i></small>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q10" value="Yes" id="questn10A">
+                <label class="form-check-label" for="questn10A">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q10" value="No" id="questn10B">
+                <label class="form-check-label" for="questn10B">
+                    No
+                </label>
+            </div>
+        </div>
+
+        <!-- Q10-B-Txt -->
+        <div id="Q10BTxt" class="form-html" data-component="text" tabindex="0">
+            <p>We&nbsp;generally are only able to represent you under the Criminal Legal Aid Scheme (CLAS) if you have one or more charge covered in our List of Statutes.</p>
+            <p>If you believe you have an exceptional case, please email&nbsp;<span style="text-decoration: underline;">help@probono.sg</span>.</p>
+            <p>Alternatively,&nbsp;if&nbsp;you are from a government agency, social service agency or other legal aid providers and your client has exhausted all other legal avenues, you may refer your&nbsp;client&nbsp;to us by emailing us at <span style="text-decoration: underline;">ahpbs@probono.sg</span>.</p>
+          </div>
+
+        <!--Q9ATxt-->
+        <div id="Q9ATxt">
+            <p>These are the statutes of offences covered under the Criminal Legal Aid Scheme (CLAS):</p>
+            <ul style="list-style-type: disc;">
+                <li>Arms &amp; Explosives Act (Cap. 13)</li>
+                <li>Arms Offences Act (Cap. 14)</li>
+                <li>Computer Misuse Act (Cap. 50A)</li>
+                <li>Corrosive &amp; Explosive Substances &amp; Offensive Weapons Act (Cap. 65)</li>
+                <li>Dangerous Fireworks Act (Cap. 72)</li>
+                <li>Enlistment Act (Cap. 93)</li>
+                <li>Explosive Substances Act (Cap. 100)</li>
+                <li>Films Act (Cap. 107)</li>
+                <li>Miscellaneous Offences (Public Order and Nuisance) Act (Cap. 184)</li>
+                <li>Misuse of Drugs Act (Cap. 185)</li>
+                <li>Moneylender's Act (Cap. 188) [Sections 19 &amp; 47]</li>
+                <li>Penal Code (Cap. 224)</li>
+                <li>Prevention of Corruption Act (Cap. 241)</li>
+                <li>Undesirable Publications Act (Cap. 338)</li>
+                <li>Vandalism Act (Cap. 341)</li>
+                <li>Women’s Charter (Cap. 353) [Sections 65(8) and 140(1)(i)]</li>
+            </ul>
+            <p>If you have multiple charges, please select "yes" if one or more of them are charges under these
+                statutes.</p>
+        </div>
+
+        <!--Q10BTxt-->
+        <div id="Q10BTxt-2">
+            <p>We are not able to represent you under CLAS if you already have a lawyer on file.</p>
+            <ul style="list-style-type: disc;">
+              <li>If you are looking to have your current lawyer represent you under CLAS, please get your lawyer to write in to <span style="text-decoration: underline;">clas@probono.sg</span>.</li>
+              <li>If you have a lawyer but wish to make an application for another lawyer under CLAS, please discharge your previous lawyer first. Do note however that you need to be financially needy to qualify for CLAS.</li>
+            </ul>
+          </div>
+
+        <!--Q-11-->
+        <div class="form-group" id="questn11">
+            <label class="que" for="Q11">Q11. Do you currently have a lawyer representing you?</label><br>
+            <small id="emailHelp" class="form-text text-muted"><i>Select one</i></small>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q11" value="Yes" id="questn11A">
+                <label class="form-check-label" for="questn11A">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="Q11" value="No" id="questn11B">
+                <label class="form-check-label" for="questn11B">
+                    No
+                </label>
+            </div>
+        </div>
+
+        <!-- Q-11-A-Txt -->
+        <div id="Q11ATxt" class="form-input-wide" data-layout="full">
+            <div id="text_16" class="form-html" data-component="text" tabindex="0">
+              <p>We are not able to represent you under CLAS if you already have a lawyer on file.</p>
+              <ul style="list-style-type: disc;">
+                <li>If you are looking to have your current lawyer represent you under CLAS, please get your lawyer to write in to <span style="text-decoration: underline;">clas@probono.sg</span>.</li>
+                <li>If you have a lawyer but wish to make an application for another lawyer under CLAS, please discharge your previous lawyer first. Do note however that you need to be financially needy to qualify for CLAS.</li>
+              </ul>
+            </div>
+          </div>
+
         <!-- Q-6 -->
-        <div class="form-group" id="questn6">   
+        <div class="form-group" id="questn6">
             <label class="que" for="exampleInputPassword1">Q6. Are you facing any of these:</label><br>
             <small id="emailHelp" class="form-text text-muted"><i>Select all that apply</i></small>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <input class="form-check-input" type="checkbox" name="Q6"
+                    value="Ongoing / threat of physical violence / harm" id="flexCheckDefault">
                 <label class="form-check-label" for="flexCheckDefault">
                     Ongoing / threat of physical violence / harm
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <input class="form-check-input" type="checkbox" name="Q6"
+                    value="Immediate loss of shelter, food, or other basic necessities" id="flexCheckChecked">
                 <label class="form-check-label" for="flexCheckChecked">
                     Immediate loss of shelter, food, or other basic necessities
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <input class="form-check-input" type="checkbox" name="Q6"
+                    value="Threat of deportation (e.g., cancellation of work permit / dependent's pass)"
+                    id="flexCheckChecked">
                 <label class="form-check-label" for="flexCheckChecked">
                     Threat of deportation (e.g., cancellation of work permit / dependent's pass)
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="other">
+                <input class="form-check-input" type="checkbox" name="Q6"
+                    value="Received legal documents with deadlines (e.g., letter of demand, summons)" id="other">
                 <label class="form-check-label" for="other">
                     Received legal documents with deadlines (e.g., letter of demand, summons)
                 </label>
             </div>
 
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <input class="form-check-input" type="checkbox" name="Q6" value="Upcoming court date"
+                    id="flexCheckChecked">
                 <label class="form-check-label" for="flexCheckChecked">
                     Upcoming court date
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                <input class="form-check-input" type="checkbox" name="Q6" value="No urgent situation"
+                    id="flexCheckChecked">
                 <label class="form-check-label" for="flexCheckChecked">
                     No urgent situation
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="questn6Other">
+                <input class="form-check-input" type="checkbox" name="Q6" value="Other" id="questn6Other">
                 <label class="form-check-label" for="questn6Other">
                     Other
                 </label>
@@ -246,7 +585,7 @@
             </div>
         </div>
 
-        <button type="submit"  id="submit" class="btn btn-primary submit-btn">Submit</button>
+        <button type="submit" id="submit" class="btn btn-primary submit-btn">Submit</button>
     </form>
 </body>
 

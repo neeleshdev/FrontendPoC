@@ -1,14 +1,19 @@
-.p-body{
-    margin: 100px;
+.p-body {
+  margin: 100px;
 }
 
 .que:after {
-    content:" *";
-    color: red;
-  }
+  content: " *";
+  color: red;
+}
 
 
-  .form-check-label{
-    font-weight: 500;
-    color: #000000c1;
-  }
+.form-check-label {
+  font-weight: 500;
+  color: #000000c1;
+}
+
+.txt-bg {
+  background: aliceblue;
+  padding: 10px;
+}
