@@ -1,5 +1,6 @@
 $(document).ready(function () {
     let button = document.querySelector(".submit-btn");
+    let isQ3Required = false;
     // button.disabled = true; //setting button state to disabled
     $("#questn3").hide();
     $("#questn4").hide();
@@ -15,6 +16,7 @@ $(document).ready(function () {
             $("#questn3").show();
             $("#questn4").show();
             $("#questn6").show();
+            isQ3Required = true;
         }
     });
 
@@ -269,154 +271,35 @@ $(document).ready(function () {
         }
     });
 
-    //SUBMIT FORM
-    // $("#other").click(function () {
-    //     if (($('#other').is(':checked'))) {
-    //         button.disabled = false; 
-    //     }else{
-    //         button.disabled = true; 
-    //     }
-    // });
+ 
+   $("#submit").click(function(event){
+        event.preventDefault();
+        var form = $("#my_form");
+		form.validate({
+			rules: {
+				Q1: {
+					required: true,
+				},
+                Q3: {
+                    required: isQ3Required
+                },
+                // Q4:{
+                //     required: true,
+                // },
+                // Q6:{
+                //     required: true,
+                // }
+			},
+			messages: {
+				username: {
+					required: "Username required",
+				},
+			}
+		});
 
-
-    $("#my_form").submit(function (event) {
-        event.preventDefault(); //prevent default action 
-
-
-        let Q1Res = getQ1output();
-        let Q2Res = getQ2output();
-        let Q3Res = getQ3output();
-        let Q4Res = getQ4output();
-        let Q5Res = getQ5output();
-        let Q6Res = getQ6output();
-        let Q7Res = getQ7output();
-
-
-        //Q1 Output
-        if (Q1Res.length > 0 && Q1Res[0] === 'Yes' && Q3Res.length > 0 && Q4Res.length > 0 && Q6Res.length > 0) {
-            //check: 1 3, 4, 6
-                console.log("Q1 :", Q1Res);
-                console.log("Q3 :", Q3Res);
-                console.log("Q4 :", Q4Res);
-                console.log("Q6 :", Q6Res);
-                alert('Form Submitted Successfully !!!');
-
-        } else if (Q1Res.length > 0 && Q1Res[0] === "No") {
-            if (Q2Res.length > 0 && Q2Res[0] === 'Yes' && Q3Res.length > 0 && Q5Res.length > 0 && Q6Res.length > 0) {
-                console.log("Q1 :", Q1Res);
-                console.log("Q2 :", Q2Res);
-                console.log("Q3 :", Q3Res);
-                console.log("Q5 :", Q5Res);
-                console.log("Q6 :", Q6Res);
-                alert('Form Submitted Successfully !!!');
-            } else if (Q2Res.length > 0 && Q2Res[0] === 'No'  && Q3Res.length > 0 && Q4Res.length > 0 && Q6Res.length > 0) {
-                console.log("Q1 :", Q1Res);
-                console.log("Q2 :", Q2Res);
-                console.log("Q3 :", Q3Res);
-                console.log("Q4 :", Q4Res);
-                console.log("Q6 :", Q6Res);
-                alert('Form Submitted Successfully !!!');
-            } else {
-                alert('Please fill the required fields marked as ( * )')
-            }
-        }else{
-            alert('Please fill the required fields marked as ( * )')
-        }
-
-        //Q2 Output
-        if (Q2Res.length > 0 && Q2Res[0] === 'Yes') {
-
-        } else if (Q2Res.length > 0 && Q2Res[0] === "No") {
-
-        }
-
-        //Q3 Output
-        if (Q3Res.length > 0) {
-
-        }
-
-        //Q4 Output 
-        if (Q4Res.length > 0) {
-
-        }
-
-
-        //Q5 Output 
-        if (Q5Res.length > 0) {
-
-        }
-
-        //Q6 Output 
-        if (Q6Res.length > 0) {
-
-        }
-
-        //Q7 Output
-        if (Q7Res.length > 0 && Q7Res[0] === 'Yes') {
-
-        } else if (Q7Res.length > 0 && Q7Res[0] === "No") {
-
-        }
-    });
-
-
-    function getQ1output() {
-        var data = [];
-        $.each($("input[name='Q1']:checked"), function () {
-            data.push($(this).val());
-        });
-        return data
-    }
-
-    function getQ2output() {
-        var data = [];
-        $.each($("input[name='Q2']:checked"), function () {
-            data.push($(this).val());
-        });
-
-        return data
-    }
-
-    function getQ3output() {
-        var question3 = [];
-        $.each($("input[name='Q3']:checked"), function () {
-            question3.push($(this).val());
-        });
-        return question3;
-    }
-
-    function getQ4output() {
-        var question4 = [];
-        $.each($("input[name='Q4']:checked"), function () {
-            question4.push($(this).val());
-        });
-        return question4;
-    }
-
-    function getQ5output() {
-        var question5 = [];
-        $.each($("input[name='Q5']:checked"), function () {
-            question5.push($(this).val());
-        });
-        return question5;
-    }
-
-    function getQ6output() {
-        var question6 = [];
-        $.each($("input[name='Q6']:checked"), function () {
-            question6.push($(this).val());
-        });
-        return question6;
-    }
-
-    function getQ7output() {
-        var data = [];
-        $.each($("input[name='Q7']:checked"), function () {
-            data.push($(this).val());
-        });
-        return data
-    }
-
+        if (form.valid() == true)alert('valid')
+		else alert('invalid')
+    })
 
 });
 
